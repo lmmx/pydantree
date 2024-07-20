@@ -100,5 +100,6 @@ nav:
   - Grammars:
       - grammars/index.md
       - grammars/python.md
+      - grammars/rust.md
   - APIs:
       - api/index.md
