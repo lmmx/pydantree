@@ -33,3 +33,17 @@ pdt = "pydantree.cli:run_cli"
 
 [tool.pdm]
 distribution = true
+
+[tool.pdm.dev-dependencies]
+docs = [
+  "mkdocs-material[recommended,imaging]>=9.5.2",
+  "mkdocs-section-index>=0.3.8",
+  "mkdocs>=1.5.3",
+  "mkdocstrings[python]>=0.24.0"
+]
+test = [
+  "pytest>=8.2.2"
+]
+vercel = [
+  "urllib3<2"
+]
