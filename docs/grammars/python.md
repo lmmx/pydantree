@@ -1,4 +1,8 @@
-## 1) module
+# Python
+
+## Rules
+
+### 1) module
 
 ```py
 RepeatRule(
@@ -7,7 +11,7 @@ RepeatRule(
 )
 ```
 
-## 2) _statement
+### 2) _statement
 
 ```py
 ChoiceRule(
@@ -19,7 +23,7 @@ ChoiceRule(
 )
 ```
 
-## 3) _simple_statements
+### 3) _simple_statements
 
 ```py
 SeqRule(
@@ -56,7 +60,7 @@ SeqRule(
 )
 ```
 
-## 4) _simple_statement
+### 4) _simple_statement
 
 ```py
 ChoiceRule(
@@ -82,7 +86,7 @@ ChoiceRule(
 )
 ```
 
-## 5) import_statement
+### 5) import_statement
 
 ```py
 SeqRule(
@@ -94,7 +98,7 @@ SeqRule(
 )
 ```
 
-## 6) import_prefix
+### 6) import_prefix
 
 ```py
 Repeat1Rule(
@@ -102,7 +106,7 @@ Repeat1Rule(
 )
 ```
 
-## 7) relative_import
+### 7) relative_import
 
 ```py
 SeqRule(
@@ -120,7 +124,7 @@ SeqRule(
 )
 ```
 
-## 8) future_import_statement
+### 8) future_import_statement
 
 ```py
 SeqRule(
@@ -149,7 +153,7 @@ SeqRule(
 )
 ```
 
-## 9) import_from_statement
+### 9) import_from_statement
 
 ```py
 SeqRule(
@@ -189,7 +193,7 @@ SeqRule(
 )
 ```
 
-## 10) _import_list
+### 10) _import_list
 
 ```py
 SeqRule(
@@ -252,7 +256,7 @@ SeqRule(
 )
 ```
 
-## 11) aliased_import
+### 11) aliased_import
 
 ```py
 SeqRule(
@@ -273,13 +277,13 @@ SeqRule(
 )
 ```
 
-## 12) wildcard_import
+### 12) wildcard_import
 
 ```py
 StringRule(type="STRING", value="*")
 ```
 
-## 13) print_statement
+### 13) print_statement
 
 ```py
 ChoiceRule(
@@ -378,7 +382,7 @@ ChoiceRule(
 )
 ```
 
-## 14) chevron
+### 14) chevron
 
 ```py
 SeqRule(
@@ -390,7 +394,7 @@ SeqRule(
 )
 ```
 
-## 15) assert_statement
+### 15) assert_statement
 
 ```py
 SeqRule(
@@ -419,7 +423,7 @@ SeqRule(
 )
 ```
 
-## 16) expression_statement
+### 16) expression_statement
 
 ```py
 ChoiceRule(
@@ -466,7 +470,7 @@ ChoiceRule(
 )
 ```
 
-## 17) named_expression
+### 17) named_expression
 
 ```py
 SeqRule(
@@ -489,7 +493,7 @@ SeqRule(
 )
 ```
 
-## 18) _named_expression_lhs
+### 18) _named_expression_lhs
 
 ```py
 ChoiceRule(
@@ -501,7 +505,7 @@ ChoiceRule(
 )
 ```
 
-## 19) return_statement
+### 19) return_statement
 
 ```py
 SeqRule(
@@ -519,7 +523,7 @@ SeqRule(
 )
 ```
 
-## 20) delete_statement
+### 20) delete_statement
 
 ```py
 SeqRule(
@@ -531,7 +535,7 @@ SeqRule(
 )
 ```
 
-## 21) _expressions
+### 21) _expressions
 
 ```py
 ChoiceRule(
@@ -543,7 +547,7 @@ ChoiceRule(
 )
 ```
 
-## 22) raise_statement
+### 22) raise_statement
 
 ```py
 SeqRule(
@@ -580,7 +584,7 @@ SeqRule(
 )
 ```
 
-## 23) pass_statement
+### 23) pass_statement
 
 ```py
 PrecRule(
@@ -590,7 +594,7 @@ PrecRule(
 )
 ```
 
-## 24) break_statement
+### 24) break_statement
 
 ```py
 PrecRule(
@@ -600,7 +604,7 @@ PrecRule(
 )
 ```
 
-## 25) continue_statement
+### 25) continue_statement
 
 ```py
 PrecRule(
@@ -610,7 +614,7 @@ PrecRule(
 )
 ```
 
-## 26) _compound_statement
+### 26) _compound_statement
 
 ```py
 ChoiceRule(
@@ -629,7 +633,7 @@ ChoiceRule(
 )
 ```
 
-## 27) if_statement
+### 27) if_statement
 
 ```py
 SeqRule(
@@ -672,7 +676,7 @@ SeqRule(
 )
 ```
 
-## 28) elif_clause
+### 28) elif_clause
 
 ```py
 SeqRule(
@@ -694,7 +698,7 @@ SeqRule(
 )
 ```
 
-## 29) else_clause
+### 29) else_clause
 
 ```py
 SeqRule(
@@ -711,7 +715,7 @@ SeqRule(
 )
 ```
 
-## 30) match_statement
+### 30) match_statement
 
 ```py
 SeqRule(
@@ -770,7 +774,7 @@ SeqRule(
 )
 ```
 
-## 31) _match_block
+### 31) _match_block
 
 ```py
 ChoiceRule(
@@ -798,7 +802,7 @@ ChoiceRule(
 )
 ```
 
-## 32) case_clause
+### 32) case_clause
 
 ```py
 SeqRule(
@@ -853,7 +857,7 @@ SeqRule(
 )
 ```
 
-## 33) for_statement
+### 33) for_statement
 
 ```py
 SeqRule(
@@ -899,7 +903,7 @@ SeqRule(
 )
 ```
 
-## 34) while_statement
+### 34) while_statement
 
 ```py
 SeqRule(
@@ -934,7 +938,7 @@ SeqRule(
 )
 ```
 
-## 35) try_statement
+### 35) try_statement
 
 ```py
 SeqRule(
@@ -1018,7 +1022,7 @@ SeqRule(
 )
 ```
 
-## 36) except_clause
+### 36) except_clause
 
 ```py
 SeqRule(
@@ -1071,7 +1075,7 @@ SeqRule(
 )
 ```
 
-## 37) except_group_clause
+### 37) except_group_clause
 
 ```py
 SeqRule(
@@ -1105,7 +1109,7 @@ SeqRule(
 )
 ```
 
-## 38) finally_clause
+### 38) finally_clause
 
 ```py
 SeqRule(
@@ -1118,7 +1122,7 @@ SeqRule(
 )
 ```
 
-## 39) with_statement
+### 39) with_statement
 
 ```py
 SeqRule(
@@ -1143,7 +1147,7 @@ SeqRule(
 )
 ```
 
-## 40) with_clause
+### 40) with_clause
 
 ```py
 ChoiceRule(
@@ -1221,7 +1225,7 @@ ChoiceRule(
 )
 ```
 
-## 41) with_item
+### 41) with_item
 
 ```py
 PrecRule(
@@ -1240,7 +1244,7 @@ PrecRule(
 )
 ```
 
-## 42) function_definition
+### 42) function_definition
 
 ```py
 SeqRule(
@@ -1304,7 +1308,7 @@ SeqRule(
 )
 ```
 
-## 43) parameters
+### 43) parameters
 
 ```py
 SeqRule(
@@ -1323,13 +1327,13 @@ SeqRule(
 )
 ```
 
-## 44) lambda_parameters
+### 44) lambda_parameters
 
 ```py
 SymbolRule(type="SYMBOL", name="_parameters")
 ```
 
-## 45) list_splat
+### 45) list_splat
 
 ```py
 SeqRule(
@@ -1341,7 +1345,7 @@ SeqRule(
 )
 ```
 
-## 46) dictionary_splat
+### 46) dictionary_splat
 
 ```py
 SeqRule(
@@ -1353,7 +1357,7 @@ SeqRule(
 )
 ```
 
-## 47) global_statement
+### 47) global_statement
 
 ```py
 SeqRule(
@@ -1382,7 +1386,7 @@ SeqRule(
 )
 ```
 
-## 48) nonlocal_statement
+### 48) nonlocal_statement
 
 ```py
 SeqRule(
@@ -1411,7 +1415,7 @@ SeqRule(
 )
 ```
 
-## 49) exec_statement
+### 49) exec_statement
 
 ```py
 SeqRule(
@@ -1469,7 +1473,7 @@ SeqRule(
 )
 ```
 
-## 50) type_alias_statement
+### 50) type_alias_statement
 
 ```py
 PrecRule(
@@ -1487,7 +1491,7 @@ PrecRule(
 )
 ```
 
-## 51) class_definition
+### 51) class_definition
 
 ```py
 SeqRule(
@@ -1531,7 +1535,7 @@ SeqRule(
 )
 ```
 
-## 52) type_parameter
+### 52) type_parameter
 
 ```py
 SeqRule(
@@ -1566,7 +1570,7 @@ SeqRule(
 )
 ```
 
-## 53) parenthesized_list_splat
+### 53) parenthesized_list_splat
 
 ```py
 PrecRule(
@@ -1597,7 +1601,7 @@ PrecRule(
 )
 ```
 
-## 54) argument_list
+### 54) argument_list
 
 ```py
 SeqRule(
@@ -1696,7 +1700,7 @@ SeqRule(
 )
 ```
 
-## 55) decorated_definition
+### 55) decorated_definition
 
 ```py
 SeqRule(
@@ -1725,7 +1729,7 @@ SeqRule(
 )
 ```
 
-## 56) decorator
+### 56) decorator
 
 ```py
 SeqRule(
@@ -1738,7 +1742,7 @@ SeqRule(
 )
 ```
 
-## 57) _suite
+### 57) _suite
 
 ```py
 ChoiceRule(
@@ -1769,7 +1773,7 @@ ChoiceRule(
 )
 ```
 
-## 58) block
+### 58) block
 
 ```py
 SeqRule(
@@ -1784,7 +1788,7 @@ SeqRule(
 )
 ```
 
-## 59) expression_list
+### 59) expression_list
 
 ```py
 PrecRule(
@@ -1834,7 +1838,7 @@ PrecRule(
 )
 ```
 
-## 60) dotted_name
+### 60) dotted_name
 
 ```py
 PrecRule(
@@ -1859,7 +1863,7 @@ PrecRule(
 )
 ```
 
-## 61) case_pattern
+### 61) case_pattern
 
 ```py
 PrecRule(
@@ -1881,7 +1885,7 @@ PrecRule(
 )
 ```
 
-## 62) _simple_pattern
+### 62) _simple_pattern
 
 ```py
 PrecRule(
@@ -1942,7 +1946,7 @@ PrecRule(
 )
 ```
 
-## 63) _as_pattern
+### 63) _as_pattern
 
 ```py
 SeqRule(
@@ -1955,7 +1959,7 @@ SeqRule(
 )
 ```
 
-## 64) union_pattern
+### 64) union_pattern
 
 ```py
 PrecRule(
@@ -1986,7 +1990,7 @@ PrecRule(
 )
 ```
 
-## 65) _list_pattern
+### 65) _list_pattern
 
 ```py
 SeqRule(
@@ -2040,7 +2044,7 @@ SeqRule(
 )
 ```
 
-## 66) _tuple_pattern
+### 66) _tuple_pattern
 
 ```py
 SeqRule(
@@ -2094,7 +2098,7 @@ SeqRule(
 )
 ```
 
-## 67) dict_pattern
+### 67) dict_pattern
 
 ```py
 SeqRule(
@@ -2167,7 +2171,7 @@ SeqRule(
 )
 ```
 
-## 68) _key_value_pattern
+### 68) _key_value_pattern
 
 ```py
 SeqRule(
@@ -2188,7 +2192,7 @@ SeqRule(
 )
 ```
 
-## 69) keyword_pattern
+### 69) keyword_pattern
 
 ```py
 SeqRule(
@@ -2201,7 +2205,7 @@ SeqRule(
 )
 ```
 
-## 70) splat_pattern
+### 70) splat_pattern
 
 ```py
 PrecRule(
@@ -2229,7 +2233,7 @@ PrecRule(
 )
 ```
 
-## 71) class_pattern
+### 71) class_pattern
 
 ```py
 SeqRule(
@@ -2284,7 +2288,7 @@ SeqRule(
 )
 ```
 
-## 72) complex_pattern
+### 72) complex_pattern
 
 ```py
 PrecRule(
@@ -2326,7 +2330,7 @@ PrecRule(
 )
 ```
 
-## 73) _parameters
+### 73) _parameters
 
 ```py
 SeqRule(
@@ -2361,7 +2365,7 @@ SeqRule(
 )
 ```
 
-## 74) _patterns
+### 74) _patterns
 
 ```py
 SeqRule(
@@ -2394,7 +2398,7 @@ SeqRule(
 )
 ```
 
-## 75) parameter
+### 75) parameter
 
 ```py
 ChoiceRule(
@@ -2413,7 +2417,7 @@ ChoiceRule(
 )
 ```
 
-## 76) pattern
+### 76) pattern
 
 ```py
 ChoiceRule(
@@ -2430,7 +2434,7 @@ ChoiceRule(
 )
 ```
 
-## 77) tuple_pattern
+### 77) tuple_pattern
 
 ```py
 SeqRule(
@@ -2449,7 +2453,7 @@ SeqRule(
 )
 ```
 
-## 78) list_pattern
+### 78) list_pattern
 
 ```py
 SeqRule(
@@ -2468,7 +2472,7 @@ SeqRule(
 )
 ```
 
-## 79) default_parameter
+### 79) default_parameter
 
 ```py
 SeqRule(
@@ -2495,7 +2499,7 @@ SeqRule(
 )
 ```
 
-## 80) typed_default_parameter
+### 80) typed_default_parameter
 
 ```py
 PrecRule(
@@ -2526,7 +2530,7 @@ PrecRule(
 )
 ```
 
-## 81) list_splat_pattern
+### 81) list_splat_pattern
 
 ```py
 SeqRule(
@@ -2546,7 +2550,7 @@ SeqRule(
 )
 ```
 
-## 82) dictionary_splat_pattern
+### 82) dictionary_splat_pattern
 
 ```py
 SeqRule(
@@ -2566,7 +2570,7 @@ SeqRule(
 )
 ```
 
-## 83) as_pattern
+### 83) as_pattern
 
 ```py
 PrecRule(
@@ -2594,7 +2598,7 @@ PrecRule(
 )
 ```
 
-## 84) _expression_within_for_in_clause
+### 84) _expression_within_for_in_clause
 
 ```py
 ChoiceRule(
@@ -2613,7 +2617,7 @@ ChoiceRule(
 )
 ```
 
-## 85) expression
+### 85) expression
 
 ```py
 ChoiceRule(
@@ -2631,7 +2635,7 @@ ChoiceRule(
 )
 ```
 
-## 86) primary_expression
+### 86) primary_expression
 
 ```py
 ChoiceRule(
@@ -2674,7 +2678,7 @@ ChoiceRule(
 )
 ```
 
-## 87) not_operator
+### 87) not_operator
 
 ```py
 PrecRule(
@@ -2694,7 +2698,7 @@ PrecRule(
 )
 ```
 
-## 88) boolean_operator
+### 88) boolean_operator
 
 ```py
 ChoiceRule(
@@ -2762,7 +2766,7 @@ ChoiceRule(
 )
 ```
 
-## 89) binary_operator
+### 89) binary_operator
 
 ```py
 ChoiceRule(
@@ -3136,7 +3140,7 @@ ChoiceRule(
 )
 ```
 
-## 90) unary_operator
+### 90) unary_operator
 
 ```py
 PrecRule(
@@ -3169,7 +3173,7 @@ PrecRule(
 )
 ```
 
-## 91) comparison_operator
+### 91) comparison_operator
 
 ```py
 PrecRule(
@@ -3267,7 +3271,7 @@ PrecRule(
 )
 ```
 
-## 92) lambda
+### 92) lambda
 
 ```py
 PrecRule(
@@ -3301,7 +3305,7 @@ PrecRule(
 )
 ```
 
-## 93) lambda_within_for_in_clause
+### 93) lambda_within_for_in_clause
 
 ```py
 SeqRule(
@@ -3333,7 +3337,7 @@ SeqRule(
 )
 ```
 
-## 94) assignment
+### 94) assignment
 
 ```py
 SeqRule(
@@ -3400,7 +3404,7 @@ SeqRule(
 )
 ```
 
-## 95) augmented_assignment
+### 95) augmented_assignment
 
 ```py
 SeqRule(
@@ -3444,7 +3448,7 @@ SeqRule(
 )
 ```
 
-## 96) _left_hand_side
+### 96) _left_hand_side
 
 ```py
 ChoiceRule(
@@ -3456,7 +3460,7 @@ ChoiceRule(
 )
 ```
 
-## 97) pattern_list
+### 97) pattern_list
 
 ```py
 SeqRule(
@@ -3499,7 +3503,7 @@ SeqRule(
 )
 ```
 
-## 98) _right_hand_side
+### 98) _right_hand_side
 
 ```py
 ChoiceRule(
@@ -3515,7 +3519,7 @@ ChoiceRule(
 )
 ```
 
-## 99) yield
+### 99) yield
 
 ```py
 PrecRule(
@@ -3553,7 +3557,7 @@ PrecRule(
 )
 ```
 
-## 100) attribute
+### 100) attribute
 
 ```py
 PrecRule(
@@ -3580,7 +3584,7 @@ PrecRule(
 )
 ```
 
-## 101) subscript
+### 101) subscript
 
 ```py
 PrecRule(
@@ -3656,7 +3660,7 @@ PrecRule(
 )
 ```
 
-## 102) slice
+### 102) slice
 
 ```py
 SeqRule(
@@ -3702,13 +3706,13 @@ SeqRule(
 )
 ```
 
-## 103) ellipsis
+### 103) ellipsis
 
 ```py
 StringRule(type="STRING", value="...")
 ```
 
-## 104) call
+### 104) call
 
 ```py
 PrecRule(
@@ -3744,7 +3748,7 @@ PrecRule(
 )
 ```
 
-## 105) typed_parameter
+### 105) typed_parameter
 
 ```py
 PrecRule(
@@ -3776,7 +3780,7 @@ PrecRule(
 )
 ```
 
-## 106) type
+### 106) type
 
 ```py
 ChoiceRule(
@@ -3792,7 +3796,7 @@ ChoiceRule(
 )
 ```
 
-## 107) splat_type
+### 107) splat_type
 
 ```py
 PrecRule(
@@ -3814,7 +3818,7 @@ PrecRule(
 )
 ```
 
-## 108) generic_type
+### 108) generic_type
 
 ```py
 PrecRule(
@@ -3830,7 +3834,7 @@ PrecRule(
 )
 ```
 
-## 109) union_type
+### 109) union_type
 
 ```py
 PrecRule(
@@ -3847,7 +3851,7 @@ PrecRule(
 )
 ```
 
-## 110) constrained_type
+### 110) constrained_type
 
 ```py
 PrecRule(
@@ -3864,7 +3868,7 @@ PrecRule(
 )
 ```
 
-## 111) member_type
+### 111) member_type
 
 ```py
 SeqRule(
@@ -3877,7 +3881,7 @@ SeqRule(
 )
 ```
 
-## 112) keyword_argument
+### 112) keyword_argument
 
 ```py
 SeqRule(
@@ -3906,7 +3910,7 @@ SeqRule(
 )
 ```
 
-## 113) list
+### 113) list
 
 ```py
 SeqRule(
@@ -3927,7 +3931,7 @@ SeqRule(
 )
 ```
 
-## 114) set
+### 114) set
 
 ```py
 SeqRule(
@@ -3940,7 +3944,7 @@ SeqRule(
 )
 ```
 
-## 115) tuple
+### 115) tuple
 
 ```py
 SeqRule(
@@ -3961,7 +3965,7 @@ SeqRule(
 )
 ```
 
-## 116) dictionary
+### 116) dictionary
 
 ```py
 SeqRule(
@@ -4027,7 +4031,7 @@ SeqRule(
 )
 ```
 
-## 117) pair
+### 117) pair
 
 ```py
 SeqRule(
@@ -4048,7 +4052,7 @@ SeqRule(
 )
 ```
 
-## 118) list_comprehension
+### 118) list_comprehension
 
 ```py
 SeqRule(
@@ -4066,7 +4070,7 @@ SeqRule(
 )
 ```
 
-## 119) dictionary_comprehension
+### 119) dictionary_comprehension
 
 ```py
 SeqRule(
@@ -4084,7 +4088,7 @@ SeqRule(
 )
 ```
 
-## 120) set_comprehension
+### 120) set_comprehension
 
 ```py
 SeqRule(
@@ -4102,7 +4106,7 @@ SeqRule(
 )
 ```
 
-## 121) generator_expression
+### 121) generator_expression
 
 ```py
 SeqRule(
@@ -4120,7 +4124,7 @@ SeqRule(
 )
 ```
 
-## 122) _comprehension_clauses
+### 122) _comprehension_clauses
 
 ```py
 SeqRule(
@@ -4141,7 +4145,7 @@ SeqRule(
 )
 ```
 
-## 123) parenthesized_expression
+### 123) parenthesized_expression
 
 ```py
 PrecRule(
@@ -4164,7 +4168,7 @@ PrecRule(
 )
 ```
 
-## 124) _collection_elements
+### 124) _collection_elements
 
 ```py
 SeqRule(
@@ -4227,7 +4231,7 @@ SeqRule(
 )
 ```
 
-## 125) for_in_clause
+### 125) for_in_clause
 
 ```py
 PrecRule(
@@ -4292,7 +4296,7 @@ PrecRule(
 )
 ```
 
-## 126) if_clause
+### 126) if_clause
 
 ```py
 SeqRule(
@@ -4304,7 +4308,7 @@ SeqRule(
 )
 ```
 
-## 127) conditional_expression
+### 127) conditional_expression
 
 ```py
 PrecRule(
@@ -4323,7 +4327,7 @@ PrecRule(
 )
 ```
 
-## 128) concatenated_string
+### 128) concatenated_string
 
 ```py
 SeqRule(
@@ -4338,7 +4342,7 @@ SeqRule(
 )
 ```
 
-## 129) string
+### 129) string
 
 ```py
 SeqRule(
@@ -4360,7 +4364,7 @@ SeqRule(
 )
 ```
 
-## 130) string_content
+### 130) string_content
 
 ```py
 PrecRule(
@@ -4385,7 +4389,7 @@ PrecRule(
 )
 ```
 
-## 131) interpolation
+### 131) interpolation
 
 ```py
 SeqRule(
@@ -4435,7 +4439,7 @@ SeqRule(
 )
 ```
 
-## 132) _f_expression
+### 132) _f_expression
 
 ```py
 ChoiceRule(
@@ -4449,7 +4453,7 @@ ChoiceRule(
 )
 ```
 
-## 133) escape_sequence
+### 133) escape_sequence
 
 ```py
 TokenRule(
@@ -4507,7 +4511,7 @@ TokenRule(
 )
 ```
 
-## 134) _not_escape_sequence
+### 134) _not_escape_sequence
 
 ```py
 TokenRule(
@@ -4516,7 +4520,7 @@ TokenRule(
 )
 ```
 
-## 135) format_specifier
+### 135) format_specifier
 
 ```py
 SeqRule(
@@ -4555,13 +4559,13 @@ SeqRule(
 )
 ```
 
-## 136) type_conversion
+### 136) type_conversion
 
 ```py
 PatternRule(type="PATTERN", value="![a-z]", flags=None)
 ```
 
-## 137) integer
+### 137) integer
 
 ```py
 TokenRule(
@@ -4707,7 +4711,7 @@ TokenRule(
 )
 ```
 
-## 138) float
+### 138) float
 
 ```py
 TokenRule(
@@ -4869,7 +4873,7 @@ TokenRule(
 )
 ```
 
-## 139) identifier
+### 139) identifier
 
 ```py
 PatternRule(
@@ -4879,7 +4883,7 @@ PatternRule(
 )
 ```
 
-## 140) keyword_identifier
+### 140) keyword_identifier
 
 ```py
 ChoiceRule(
@@ -4914,25 +4918,25 @@ ChoiceRule(
 )
 ```
 
-## 141) true
+### 141) true
 
 ```py
 StringRule(type="STRING", value="True")
 ```
 
-## 142) false
+### 142) false
 
 ```py
 StringRule(type="STRING", value="False")
 ```
 
-## 143) none
+### 143) none
 
 ```py
 StringRule(type="STRING", value="None")
 ```
 
-## 144) await
+### 144) await
 
 ```py
 PrecRule(
@@ -4948,7 +4952,7 @@ PrecRule(
 )
 ```
 
-## 145) comment
+### 145) comment
 
 ```py
 TokenRule(
@@ -4963,7 +4967,7 @@ TokenRule(
 )
 ```
 
-## 146) line_continuation
+### 146) line_continuation
 
 ```py
 TokenRule(
@@ -4998,15 +5002,165 @@ TokenRule(
 )
 ```
 
-## 147) positional_separator
+### 147) positional_separator
 
 ```py
 StringRule(type="STRING", value="/")
 ```
 
-## 148) keyword_separator
+### 148) keyword_separator
 
 ```py
 StringRule(type="STRING", value="*")
 ```
+
+## Extras
+
+### 1)
+
+```py
+SymbolRule(type="SYMBOL", name="comment")
+```
+
+### 2)
+
+```py
+PatternRule(
+    type="PATTERN",
+    value="[\\s\\f\\uFEFF\\u2060\\u200B]|\\r?\\n",
+    flags=None,
+)
+```
+
+### 3)
+
+```py
+SymbolRule(type="SYMBOL", name="line_continuation")
+```
+
+## Precedences
+
+## Externals
+
+### 1)
+
+```py
+SymbolRule(type="SYMBOL", name="_newline")
+```
+
+### 2)
+
+```py
+SymbolRule(type="SYMBOL", name="_indent")
+```
+
+### 3)
+
+```py
+SymbolRule(type="SYMBOL", name="_dedent")
+```
+
+### 4)
+
+```py
+SymbolRule(type="SYMBOL", name="string_start")
+```
+
+### 5)
+
+```py
+SymbolRule(type="SYMBOL", name="_string_content")
+```
+
+### 6)
+
+```py
+SymbolRule(type="SYMBOL", name="escape_interpolation")
+```
+
+### 7)
+
+```py
+SymbolRule(type="SYMBOL", name="string_end")
+```
+
+### 8)
+
+```py
+SymbolRule(type="SYMBOL", name="comment")
+```
+
+### 9)
+
+```py
+StringRule(type="STRING", value="]")
+```
+
+### 10)
+
+```py
+StringRule(type="STRING", value=")")
+```
+
+### 11)
+
+```py
+StringRule(type="STRING", value="}")
+```
+
+### 12)
+
+```py
+StringRule(type="STRING", value="except")
+```
+
+## Inline
+
+### 1) _simple_statement
+
+### 2) _compound_statement
+
+### 3) _suite
+
+### 4) _expressions
+
+### 5) _left_hand_side
+
+### 6) keyword_identifier
+
+## Conflicts
+
+### 1) primary_expression + pattern
+
+### 2) primary_expression + list_splat_pattern
+
+### 3) tuple + tuple_pattern
+
+### 4) list + list_pattern
+
+### 5) with_item + _collection_elements
+
+### 6) named_expression + as_pattern
+
+### 7) print_statement + primary_expression
+
+### 8) type_alias_statement + primary_expression
+
+## Word
+
+identifier
+
+## supertypes
+
+### 1) _simple_statement
+
+### 2) _compound_statement
+
+### 3) expression
+
+### 4) primary_expression
+
+### 5) pattern
+
+### 6) parameter
 
