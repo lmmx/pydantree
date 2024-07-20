@@ -1,3 +1,5 @@
+from typing import Literal, Union
+
 from pydantic import BaseModel, ConfigDict, RootModel
 
 __all__ = ["Rule", "ConflictList", "External", "Grammar"]
@@ -24,13 +26,26 @@ class External(BaseModel):
     value: str | None = None
 
 
+class SymbolExternal(BaseModel):
+    type: Literal["SYMBOL"]
+    name: str
+
+
+class StringExternal(BaseModel):
+    type: Literal["STRING"]
+    value: str
+
+
+External = Union[SymbolExternal, StringExternal]
+
+
 class Grammar(BaseModel):
     name: str
     word: str
     rules: dict[str, Rule]
+    extras: list[Rule | str]
     conflicts: ConflictList
     precedences: list
     externals: list[External]
-    extras: list[Rule | str]
     inline: list[str]
     supertypes: list[str]

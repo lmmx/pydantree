@@ -47,3 +47,6 @@ test = [
 vercel = [
   "urllib3<2"
 ]
+datamodel-codegen = [
+  "datamodel-code-generator>=0.25.8"
+]
