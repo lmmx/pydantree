@@ -1,4 +1,3 @@
-import json
 from sys import stderr
 
 from ..interface.models import GrammarConfig
@@ -13,5 +12,5 @@ def generate_grammar(config: GrammarConfig) -> None:
         grammar = TreeSitterGrammarSpecification.model_validate_json(schema_json)
         print(f"Grammar generated from file: {config.input_file}")
         print(grammar.model_dump_json(indent=2))
-    except:
+    except Exception:
         print(f"Error: Invalid JSON in grammar file {config.input_file}", file=stderr)
