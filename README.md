@@ -1,4 +1,4 @@
-# pydantee
+# pydantree
 
 Pydantic parser for tree-sitter
 
