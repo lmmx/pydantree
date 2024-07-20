@@ -9,7 +9,10 @@ description = "Pydantic parser for tree-sitter"
 authors = [
   {name = "Louis Maddox", email = "louismmx@gmail.com"}
 ]
-dependencies = []
+dependencies = [
+  "defopt>=6.4.0",
+  "pydantic>=2.8.2"
+]
 requires-python = ">=3.10"
 readme = "README.md"
 license = {text = "MIT"}
@@ -24,6 +27,9 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3 :: Only"
 ]
+
+[project.scripts]
+pdt = "pydantree.cli:run_cli"
 
 [tool.pdm]
 distribution = true
