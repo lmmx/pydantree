@@ -2,6 +2,19 @@
 
 Pydantic parser for tree-sitter
 
+[![PyPI Version](https://img.shields.io/pypi/v/pydantree)](https://pypi.org/project/pydantree/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/pydantree.svg)](https://pypi.org/project/pydantree/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Documentation](https://img.shields.io/badge/docs-pydantree.vercel.app-blue)](https://pydantree.vercel.app/)
+[![CI Status](https://github.com/lmmx/pydantree/actions/workflows/ci.yml/badge.svg)](https://github.com/lmmx/pydantree/actions/workflows/ci.yml)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/lmmx/pydantree/master.svg)](https://results.pre-commit.ci/latest/github/lmmx/pydantree/master)
+
+## Installation
+
+```bash
+pip install pydantree
+```
+
 ## Grammar
 
 The grammar comes from
