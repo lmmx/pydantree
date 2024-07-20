@@ -7,7 +7,7 @@ from pydantic import ValidationError
 from ..grammar import generate_grammar
 from .interfaces import GrammarConfig
 
-__all__ = ["run_cli"]
+__all__ = ["run"]
 
 
 def handle_validation_error(ve: ValidationError) -> None:
@@ -16,7 +16,7 @@ def handle_validation_error(ve: ValidationError) -> None:
     print(msg, end="\n\n", file=stderr)
 
 
-def run_cli():
+def run():
     try:
         config = defopt.run(GrammarConfig, no_negated_flags=True)
     except ValidationError as ve:
@@ -28,7 +28,3 @@ def run_cli():
             raise
     else:
         generate_grammar(config=config)
-
-
-if __name__ == "__main__":
-    run_cli()

@@ -29,7 +29,7 @@ classifiers = [
 ]
 
 [project.scripts]
-pdt = "pydantree.cli:run_cli"
+pdt = "pydantree.interface:run"
 
 [tool.pdm]
 distribution = true

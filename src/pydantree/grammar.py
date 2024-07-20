@@ -1,7 +1,7 @@
 import json
 from sys import stderr
 
-from .cli.interfaces import GrammarConfig
+from .interface.models import GrammarConfig
 
 __all__ = ["generate_grammar"]
 
