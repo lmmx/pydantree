@@ -1,4 +1,3 @@
-from pprint import pprint
 from sys import stderr
 
 import black
@@ -9,10 +8,10 @@ from .models import TreeSitterGrammarSpecification
 __all__ = ["view_grammar"]
 
 
-def pprint_model(model):
+def pprint_model(model) -> str:
     s = repr(model)
-    pretty = black.format_str(s, mode=black.FileMode(line_length=200))
-    print(pretty)
+    pretty = black.format_str(s, mode=black.FileMode(line_length=70))
+    return pretty
 
 
 def view_grammar(config: GrammarConfig) -> None:
@@ -22,8 +21,7 @@ def view_grammar(config: GrammarConfig) -> None:
         # print(f"Grammar generated from file: {config.input_file}")
         rules = [(k, grammar.rules[k]) for k in list(grammar.rules)]
         for idx, (name, rule) in enumerate(rules):
-            print(f"Rule {idx}) {name}", end=": ")
-            pprint_model(rule)
-    except Exception:
-        breakpoint()
-        print(f"Error: Invalid JSON in grammar file {config.input_file}", file=stderr)
+            print(f"## {idx + 1}) {name}", end="\n\n")
+            print("```py\n" + pprint_model(rule) + "```\n")
+    except Exception as exc:
+        print(f"Error parsing grammar file {config.input_file}: {exc}", file=stderr)

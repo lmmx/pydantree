@@ -1,5 +1,5 @@
-import re
 import argparse
+import re
 from pathlib import Path
 
 
@@ -48,24 +48,18 @@ def replace_patterns_in_file(file_path):
     content = re.sub(single_value_pattern, single_value_replacement, content)
     content = re.sub(multiple_values_pattern, multiple_values_replacement, content)
 
-    # Find and replace class Rule definition
+    # Remove Rule class and keep RuleUnion
     rule_class_pattern = re.compile(
         r"class Rule\(\s*RootModel\[\s*Union\[\s*([\w\s,]+)\s*\]\s*\]\s*\):\s*root:\s*Union\[\s*([\w\s,]+)\s*\]",
     )
 
     def rule_class_replacement(match):
         union_types = match.group(1).replace("\n", "").replace(" ", "").split(",")
-        union_variable = "RuleUnion"
+        union_variable = "Rule"  # formerly RuleUnion
         union_definition = (
             f"{union_variable} = Union[\n    " + ",\n    ".join(union_types) + "\n]"
         )
-        return (
-            f"{union_definition}\n\n"
-            "class Rule(RootModel[\n"
-            f"    {union_variable}\n"
-            "]):\n"
-            f"    root: {union_variable}"
-        )
+        return union_definition
 
     content = re.sub(rule_class_pattern, rule_class_replacement, content)
 

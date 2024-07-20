@@ -97,5 +97,8 @@ nav:
       - index.md
   - Usage:
       - Usage Guide: usage/index.md
+  - Grammars:
+      - grammars/index.md
+      - grammars/python.md
   - APIs:
       - api/index.md
