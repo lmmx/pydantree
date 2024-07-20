@@ -8,7 +8,8 @@ datamodel-codegen \
   --input-file-type=jsonschema
   --output grammar/models.py \
   --output-model-type=pydantic_v2.BaseModel \
-  --enum-field-as-literal=all
+  --enum-field-as-literal=all \
+  --use-double-quotes
 ```
 
 Then amend it to remove the regex patterns where Literal would be better
