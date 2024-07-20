@@ -5,7 +5,7 @@ import defopt
 from pydantic import ValidationError
 
 from ..grammar import generate_grammar
-from .interfaces import GrammarConfig
+from .models import GrammarConfig
 
 __all__ = ["run"]
 
