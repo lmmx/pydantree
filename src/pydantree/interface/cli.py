@@ -4,7 +4,7 @@ from textwrap import indent
 import defopt
 from pydantic import ValidationError
 
-from ..grammar import generate_grammar
+from ..grammar import view_grammar
 from .models import GrammarConfig
 
 __all__ = ["run"]
@@ -22,9 +22,9 @@ def run():
     except ValidationError as ve:
         handle_validation_error(ve)
         try:
-            defopt.run(generate_grammar, argv=["-h"], no_negated_flags=True)
+            defopt.run(view_grammar, argv=["-h"], no_negated_flags=True)
         except SystemExit as exc:
             exc.code = 1
             raise
     else:
-        generate_grammar(config=config)
+        view_grammar(config=config)

@@ -1,3 +1,3 @@
-from .generate import generate_grammar
+from .view import view_grammar
 
-__all__ = ["generate_grammar"]
+__all__ = ["view_grammar"]
