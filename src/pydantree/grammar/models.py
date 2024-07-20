@@ -4,28 +4,28 @@
 
 from __future__ import annotations
 
-from typing import Any, Union
+from typing import Any, Union, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, RootModel, constr
 
 
 class BlankRule(BaseModel):
-    type: constr(pattern=r"^BLANK$")
+    type: Literal["BLANK"]
 
 
 class StringRule(BaseModel):
-    type: constr(pattern=r"^STRING$")
+    type: Literal["STRING"]
     value: str
 
 
 class PatternRule(BaseModel):
-    type: constr(pattern=r"^PATTERN$")
+    type: Literal["PATTERN"]
     value: str
     flags: str | None = None
 
 
 class SymbolRule(BaseModel):
-    type: constr(pattern=r"^SYMBOL$")
+    type: Literal["SYMBOL"]
     name: str
 
 
@@ -55,45 +55,45 @@ class TreeSitterGrammarSpecification(BaseModel):
 
 
 class SeqRule(BaseModel):
-    type: constr(pattern=r"^SEQ$")
+    type: Literal["SEQ"]
     members: list[Rule]
 
 
 class ChoiceRule(BaseModel):
-    type: constr(pattern=r"^CHOICE$")
+    type: Literal["CHOICE"]
     members: list[Rule]
 
 
 class AliasRule(BaseModel):
-    type: constr(pattern=r"^ALIAS$")
+    type: Literal["ALIAS"]
     value: str
     named: bool
     content: Rule
 
 
 class RepeatRule(BaseModel):
-    type: constr(pattern=r"^REPEAT$")
+    type: Literal["REPEAT"]
     content: Rule
 
 
 class Repeat1Rule(BaseModel):
-    type: constr(pattern=r"^REPEAT1$")
+    type: Literal["REPEAT1"]
     content: Rule
 
 
 class TokenRule(BaseModel):
-    type: constr(pattern=r"^(TOKEN|IMMEDIATE_TOKEN)$")
+    type: Literal["TOKEN", "IMMEDIATE_TOKEN"]
     content: Rule
 
 
 class FieldRule(BaseModel):
     name: str
-    type: constr(pattern=r"^FIELD$")
+    type: Literal["FIELD"]
     content: Rule
 
 
 class PrecRule(BaseModel):
-    type: constr(pattern=r"^(PREC|PREC_LEFT|PREC_RIGHT|PREC_DYNAMIC)$")
+    type: Literal["PREC", "PREC_LEFT", "PREC_RIGHT", "PREC_DYNAMIC"]
     value: Any
     content: Rule
 
