@@ -10,3 +10,11 @@ datamodel-codegen \
   --output-model-type=pydantic_v2.BaseModel \
   --enum-field-as-literal=all
 ```
+
+Then amend it to remove the regex patterns where Literal would be better
+
+```sh
+python grammar/amend_dcg_models.py --input=grammar/models.py
+```
+
+Then run pre-commit (twice) to run code style fixers
