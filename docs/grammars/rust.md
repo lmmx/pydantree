@@ -7150,4 +7150,3 @@ identifier
 ### 5) _declaration_statement
 
 ### 6) _pattern
-
