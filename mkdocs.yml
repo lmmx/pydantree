@@ -97,6 +97,10 @@ nav:
       - index.md
   - Usage:
       - Usage Guide: usage/index.md
+  - Node Types:
+      - nodes/index.md
+      - nodes/python.md
+      - nodes/rust.md
   - Grammars:
       - grammars/index.md
       - grammars/python.md
