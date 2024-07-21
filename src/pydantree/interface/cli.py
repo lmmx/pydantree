@@ -5,7 +5,8 @@ import defopt
 from pydantic import ValidationError
 
 from ..grammar import view_grammar
-from .models import GrammarConfig
+from ..nodes import view_node_types
+from .models import GrammarConfig, NodeTypesConfig
 
 __all__ = ["run"]
 
