@@ -64,7 +64,7 @@ def view_grammar(config: GrammarConfig) -> None:
         print("## Conflicts", end="\n\n")
         for idx, conflict in enumerate(grammar.conflicts):
             conflict_expr = " + ".join(conflict)
-            print(f"### {idx + 1}) {conflict}", end="\n\n")
+            print(f"### {idx + 1}) {conflict_expr}", end="\n\n")
 
         print("## Word", end="\n\n")
         print(grammar.word, end="\n\n")
