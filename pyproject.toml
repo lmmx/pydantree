@@ -33,6 +33,11 @@ classifiers = [
 [project.license]
 text = "MIT"
 
+[project.optional-dependencies]
+dev = [
+  "pre-commit>=4.1.0"
+]
+
 [project.scripts]
 pdt = "pydantree.interface:run"
 
