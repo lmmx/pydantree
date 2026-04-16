@@ -2,43 +2,6 @@
 build-backend = "uv_build"
 requires = ["uv_build>=0.11.6,<0.12"]
 
-[project]
-name = "pydantree"
-version = "0.1.1"
-description = "Pydantic parser for tree-sitter"
-authors = [
-  {name = "Louis Maddox", email = "louismmx@gmail.com"}
-]
-dependencies = [
-  "defopt>=6.4.0",
-  "pydantic>=2.12",
-  "black>=26",
-]
-requires-python = ">=3.10"
-readme = "README.md"
-classifiers = [
-  "Development Status :: 3 - Alpha",
-  "Intended Audience :: Developers",
-  "Operating System :: OS Independent",
-  "License :: OSI Approved :: MIT License",
-  "Programming Language :: Python",
-  "Programming Language :: Python :: 3.10",
-  "Programming Language :: Python :: 3.11",
-  "Programming Language :: Python :: 3.12",
-  "Programming Language :: Python :: 3 :: Only"
-]
-
-[project.license]
-text = "MIT"
-
-[project.optional-dependencies]
-dev = [
-  "pre-commit>=4.1.0"
-]
-
-[project.scripts]
-pdt = "pydantree.interface:run"
-
 [dependency-groups]
 docs = [
   "mkdocs-material[recommended,imaging]>=9.5.2",
@@ -56,8 +19,47 @@ datamodel-codegen = [
   "datamodel-code-generator>=0.25.8"
 ]
 dev = [
-    "pdbpp>=0.12.1",
+  "pdbpp>=0.12.1"
 ]
+
+[project]
+name = "pydantree"
+version = "0.1.1"
+description = "Pydantic parser for tree-sitter"
+authors = [
+  {name = "Louis Maddox", email = "louismmx@gmail.com"}
+]
+dependencies = [
+  "defopt>=6.4.0",
+  "pydantic>=2.12",
+  "black>=26"
+]
+requires-python = ">=3.10"
+readme = "README.md"
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3 :: Only"
+]
+
+[project.license]
+text = "MIT"
+
+[project.optional-dependencies]
+dev = [
+  "pre-commit>=4.1.0"
+]
+
+[project.scripts]
+pdt = "pydantree.interface:run"
 
 [tool.uv]
 default-groups = ["dev", "test", "datamodel-codegen"]
