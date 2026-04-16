@@ -24,7 +24,7 @@ dev = [
 
 [project]
 name = "pydantree"
-version = "0.1.1"
+version = "0.1.2"
 description = "Pydantic parser for tree-sitter"
 authors = [
   {name = "Louis Maddox", email = "louismmx@gmail.com"}
