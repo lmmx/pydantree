@@ -1,8 +1,6 @@
 [build-system]
-requires = [
-  "pdm-backend"
-]
-build-backend = "pdm.backend"
+build-backend = "uv_build"
+requires = ["uv_build>=0.11.6,<0.12"]
 
 [project]
 name = "pydantree"
@@ -41,10 +39,7 @@ dev = [
 [project.scripts]
 pdt = "pydantree.interface:run"
 
-[tool.pdm]
-distribution = true
-
-[tool.pdm.dev-dependencies]
+[dependency-groups]
 docs = [
   "mkdocs-material[recommended,imaging]>=9.5.2",
   "mkdocs-section-index>=0.3.8",
@@ -60,3 +55,9 @@ vercel = [
 datamodel-codegen = [
   "datamodel-code-generator>=0.25.8"
 ]
+dev = [
+    "pdbpp>=0.12.1",
+]
+
+[tool.uv]
+default-groups = ["dev", "test", "datamodel-codegen"]
