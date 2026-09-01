@@ -57,9 +57,7 @@ ChoiceRule(
         PrecRule(
             type="PREC",
             value=1,
-            content=SymbolRule(
-                type="SYMBOL", name="_expression_ending_with_block"
-            ),
+            content=SymbolRule(type="SYMBOL", name="_expression_ending_with_block"),
         ),
     ],
 )
@@ -110,9 +108,7 @@ SeqRule(
                 type="CHOICE",
                 members=[
                     SymbolRule(type="SYMBOL", name="identifier"),
-                    SymbolRule(
-                        type="SYMBOL", name="_reserved_identifier"
-                    ),
+                    SymbolRule(type="SYMBOL", name="_reserved_identifier"),
                 ],
             ),
         ),
@@ -250,9 +246,7 @@ SeqRule(
         FieldRule(
             name="left",
             type="FIELD",
-            content=SymbolRule(
-                type="SYMBOL", name="token_tree_pattern"
-            ),
+            content=SymbolRule(type="SYMBOL", name="token_tree_pattern"),
         ),
         StringRule(type="STRING", value="=>"),
         FieldRule(
@@ -291,9 +285,7 @@ ChoiceRule(
                 StringRule(type="STRING", value="("),
                 RepeatRule(
                     type="REPEAT",
-                    content=SymbolRule(
-                        type="SYMBOL", name="_token_pattern"
-                    ),
+                    content=SymbolRule(type="SYMBOL", name="_token_pattern"),
                 ),
                 StringRule(type="STRING", value=")"),
             ],
@@ -304,9 +296,7 @@ ChoiceRule(
                 StringRule(type="STRING", value="["),
                 RepeatRule(
                     type="REPEAT",
-                    content=SymbolRule(
-                        type="SYMBOL", name="_token_pattern"
-                    ),
+                    content=SymbolRule(type="SYMBOL", name="_token_pattern"),
                 ),
                 StringRule(type="STRING", value="]"),
             ],
@@ -317,9 +307,7 @@ ChoiceRule(
                 StringRule(type="STRING", value="{"),
                 RepeatRule(
                     type="REPEAT",
-                    content=SymbolRule(
-                        type="SYMBOL", name="_token_pattern"
-                    ),
+                    content=SymbolRule(type="SYMBOL", name="_token_pattern"),
                 ),
                 StringRule(type="STRING", value="}"),
             ],
@@ -340,17 +328,13 @@ PrecRule(
             FieldRule(
                 name="name",
                 type="FIELD",
-                content=SymbolRule(
-                    type="SYMBOL", name="metavariable"
-                ),
+                content=SymbolRule(type="SYMBOL", name="metavariable"),
             ),
             StringRule(type="STRING", value=":"),
             FieldRule(
                 name="type",
                 type="FIELD",
-                content=SymbolRule(
-                    type="SYMBOL", name="fragment_specifier"
-                ),
+                content=SymbolRule(type="SYMBOL", name="fragment_specifier"),
             ),
         ],
     ),
@@ -373,9 +357,7 @@ SeqRule(
         ChoiceRule(
             type="CHOICE",
             members=[
-                PatternRule(
-                    type="PATTERN", value="[^+*?]+", flags=None
-                ),
+                PatternRule(type="PATTERN", value="[^+*?]+", flags=None),
                 BlankRule(type="BLANK"),
             ],
         ),
@@ -487,9 +469,7 @@ SeqRule(
         ChoiceRule(
             type="CHOICE",
             members=[
-                PatternRule(
-                    type="PATTERN", value="[^+*?]+", flags=None
-                ),
+                PatternRule(type="PATTERN", value="[^+*?]+", flags=None),
                 BlankRule(type="BLANK"),
             ],
         ),
@@ -736,9 +716,7 @@ SeqRule(
                 FieldRule(
                     name="body",
                     type="FIELD",
-                    content=SymbolRule(
-                        type="SYMBOL", name="declaration_list"
-                    ),
+                    content=SymbolRule(type="SYMBOL", name="declaration_list"),
                 ),
             ],
         ),
@@ -767,9 +745,7 @@ SeqRule(
                 FieldRule(
                     name="body",
                     type="FIELD",
-                    content=SymbolRule(
-                        type="SYMBOL", name="declaration_list"
-                    ),
+                    content=SymbolRule(type="SYMBOL", name="declaration_list"),
                 ),
             ],
         ),
@@ -786,9 +762,7 @@ SeqRule(
         StringRule(type="STRING", value="{"),
         RepeatRule(
             type="REPEAT",
-            content=SymbolRule(
-                type="SYMBOL", name="_declaration_statement"
-            ),
+            content=SymbolRule(type="SYMBOL", name="_declaration_statement"),
         ),
         StringRule(type="STRING", value="}"),
     ],
@@ -812,9 +786,7 @@ SeqRule(
         FieldRule(
             name="name",
             type="FIELD",
-            content=SymbolRule(
-                type="SYMBOL", name="_type_identifier"
-            ),
+            content=SymbolRule(type="SYMBOL", name="_type_identifier"),
         ),
         FieldRule(
             name="type_parameters",
@@ -836,9 +808,7 @@ SeqRule(
                         ChoiceRule(
                             type="CHOICE",
                             members=[
-                                SymbolRule(
-                                    type="SYMBOL", name="where_clause"
-                                ),
+                                SymbolRule(type="SYMBOL", name="where_clause"),
                                 BlankRule(type="BLANK"),
                             ],
                         ),
@@ -866,9 +836,7 @@ SeqRule(
                         ChoiceRule(
                             type="CHOICE",
                             members=[
-                                SymbolRule(
-                                    type="SYMBOL", name="where_clause"
-                                ),
+                                SymbolRule(type="SYMBOL", name="where_clause"),
                                 BlankRule(type="BLANK"),
                             ],
                         ),
@@ -899,9 +867,7 @@ SeqRule(
         FieldRule(
             name="name",
             type="FIELD",
-            content=SymbolRule(
-                type="SYMBOL", name="_type_identifier"
-            ),
+            content=SymbolRule(type="SYMBOL", name="_type_identifier"),
         ),
         FieldRule(
             name="type_parameters",
@@ -924,9 +890,7 @@ SeqRule(
         FieldRule(
             name="body",
             type="FIELD",
-            content=SymbolRule(
-                type="SYMBOL", name="field_declaration_list"
-            ),
+            content=SymbolRule(type="SYMBOL", name="field_declaration_list"),
         ),
     ],
 )
@@ -949,9 +913,7 @@ SeqRule(
         FieldRule(
             name="name",
             type="FIELD",
-            content=SymbolRule(
-                type="SYMBOL", name="_type_identifier"
-            ),
+            content=SymbolRule(type="SYMBOL", name="_type_identifier"),
         ),
         FieldRule(
             name="type_parameters",
@@ -974,9 +936,7 @@ SeqRule(
         FieldRule(
             name="body",
             type="FIELD",
-            content=SymbolRule(
-                type="SYMBOL", name="enum_variant_list"
-            ),
+            content=SymbolRule(type="SYMBOL", name="enum_variant_list"),
         ),
     ],
 )
@@ -1005,9 +965,7 @@ SeqRule(
                                         name="attribute_item",
                                     ),
                                 ),
-                                SymbolRule(
-                                    type="SYMBOL", name="enum_variant"
-                                ),
+                                SymbolRule(type="SYMBOL", name="enum_variant"),
                             ],
                         ),
                         RepeatRule(
@@ -1015,9 +973,7 @@ SeqRule(
                             content=SeqRule(
                                 type="SEQ",
                                 members=[
-                                    StringRule(
-                                        type="STRING", value=","
-                                    ),
+                                    StringRule(type="STRING", value=","),
                                     SeqRule(
                                         type="SEQ",
                                         members=[
@@ -1105,9 +1061,7 @@ SeqRule(
                         FieldRule(
                             name="value",
                             type="FIELD",
-                            content=SymbolRule(
-                                type="SYMBOL", name="_expression"
-                            ),
+                            content=SymbolRule(type="SYMBOL", name="_expression"),
                         ),
                     ],
                 ),
@@ -1152,9 +1106,7 @@ SeqRule(
                             content=SeqRule(
                                 type="SEQ",
                                 members=[
-                                    StringRule(
-                                        type="STRING", value=","
-                                    ),
+                                    StringRule(type="STRING", value=","),
                                     SeqRule(
                                         type="SEQ",
                                         members=[
@@ -1207,9 +1159,7 @@ SeqRule(
         FieldRule(
             name="name",
             type="FIELD",
-            content=SymbolRule(
-                type="SYMBOL", name="_field_identifier"
-            ),
+            content=SymbolRule(type="SYMBOL", name="_field_identifier"),
         ),
         StringRule(type="STRING", value=":"),
         FieldRule(
@@ -1257,9 +1207,7 @@ SeqRule(
                                 FieldRule(
                                     name="type",
                                     type="FIELD",
-                                    content=SymbolRule(
-                                        type="SYMBOL", name="_type"
-                                    ),
+                                    content=SymbolRule(type="SYMBOL", name="_type"),
                                 ),
                             ],
                         ),
@@ -1268,9 +1216,7 @@ SeqRule(
                             content=SeqRule(
                                 type="SEQ",
                                 members=[
-                                    StringRule(
-                                        type="STRING", value=","
-                                    ),
+                                    StringRule(type="STRING", value=","),
                                     SeqRule(
                                         type="SEQ",
                                         members=[
@@ -1288,9 +1234,7 @@ SeqRule(
                                                         type="SYMBOL",
                                                         name="visibility_modifier",
                                                     ),
-                                                    BlankRule(
-                                                        type="BLANK"
-                                                    ),
+                                                    BlankRule(type="BLANK"),
                                                 ],
                                             ),
                                             FieldRule(
@@ -1353,9 +1297,7 @@ SeqRule(
                         FieldRule(
                             name="alias",
                             type="FIELD",
-                            content=SymbolRule(
-                                type="SYMBOL", name="identifier"
-                            ),
+                            content=SymbolRule(type="SYMBOL", name="identifier"),
                         ),
                     ],
                 ),
@@ -1402,9 +1344,7 @@ SeqRule(
                         FieldRule(
                             name="value",
                             type="FIELD",
-                            content=SymbolRule(
-                                type="SYMBOL", name="_expression"
-                            ),
+                            content=SymbolRule(type="SYMBOL", name="_expression"),
                         ),
                     ],
                 ),
@@ -1465,9 +1405,7 @@ SeqRule(
                         FieldRule(
                             name="value",
                             type="FIELD",
-                            content=SymbolRule(
-                                type="SYMBOL", name="_expression"
-                            ),
+                            content=SymbolRule(type="SYMBOL", name="_expression"),
                         ),
                     ],
                 ),
@@ -1496,9 +1434,7 @@ SeqRule(
         FieldRule(
             name="name",
             type="FIELD",
-            content=SymbolRule(
-                type="SYMBOL", name="_type_identifier"
-            ),
+            content=SymbolRule(type="SYMBOL", name="_type_identifier"),
         ),
         FieldRule(
             name="type_parameters",
@@ -1587,9 +1523,7 @@ SeqRule(
                         FieldRule(
                             name="return_type",
                             type="FIELD",
-                            content=SymbolRule(
-                                type="SYMBOL", name="_type"
-                            ),
+                            content=SymbolRule(type="SYMBOL", name="_type"),
                         ),
                     ],
                 ),
@@ -1670,9 +1604,7 @@ SeqRule(
                         FieldRule(
                             name="return_type",
                             type="FIELD",
-                            content=SymbolRule(
-                                type="SYMBOL", name="_type"
-                            ),
+                            content=SymbolRule(type="SYMBOL", name="_type"),
                         ),
                     ],
                 ),
@@ -1763,12 +1695,8 @@ SeqRule(
                 type="CHOICE",
                 members=[
                     SymbolRule(type="SYMBOL", name="lifetime"),
-                    SymbolRule(
-                        type="SYMBOL", name="_type_identifier"
-                    ),
-                    SymbolRule(
-                        type="SYMBOL", name="scoped_type_identifier"
-                    ),
+                    SymbolRule(type="SYMBOL", name="_type_identifier"),
+                    SymbolRule(type="SYMBOL", name="scoped_type_identifier"),
                     SymbolRule(type="SYMBOL", name="generic_type"),
                     SymbolRule(type="SYMBOL", name="reference_type"),
                     SymbolRule(type="SYMBOL", name="pointer_type"),
@@ -1787,51 +1715,21 @@ SeqRule(
                             members=[
                                 StringRule(type="STRING", value="u8"),
                                 StringRule(type="STRING", value="i8"),
-                                StringRule(
-                                    type="STRING", value="u16"
-                                ),
-                                StringRule(
-                                    type="STRING", value="i16"
-                                ),
-                                StringRule(
-                                    type="STRING", value="u32"
-                                ),
-                                StringRule(
-                                    type="STRING", value="i32"
-                                ),
-                                StringRule(
-                                    type="STRING", value="u64"
-                                ),
-                                StringRule(
-                                    type="STRING", value="i64"
-                                ),
-                                StringRule(
-                                    type="STRING", value="u128"
-                                ),
-                                StringRule(
-                                    type="STRING", value="i128"
-                                ),
-                                StringRule(
-                                    type="STRING", value="isize"
-                                ),
-                                StringRule(
-                                    type="STRING", value="usize"
-                                ),
-                                StringRule(
-                                    type="STRING", value="f32"
-                                ),
-                                StringRule(
-                                    type="STRING", value="f64"
-                                ),
-                                StringRule(
-                                    type="STRING", value="bool"
-                                ),
-                                StringRule(
-                                    type="STRING", value="str"
-                                ),
-                                StringRule(
-                                    type="STRING", value="char"
-                                ),
+                                StringRule(type="STRING", value="u16"),
+                                StringRule(type="STRING", value="i16"),
+                                StringRule(type="STRING", value="u32"),
+                                StringRule(type="STRING", value="i32"),
+                                StringRule(type="STRING", value="u64"),
+                                StringRule(type="STRING", value="i64"),
+                                StringRule(type="STRING", value="u128"),
+                                StringRule(type="STRING", value="i128"),
+                                StringRule(type="STRING", value="isize"),
+                                StringRule(type="STRING", value="usize"),
+                                StringRule(type="STRING", value="f32"),
+                                StringRule(type="STRING", value="f64"),
+                                StringRule(type="STRING", value="bool"),
+                                StringRule(type="STRING", value="str"),
+                                StringRule(type="STRING", value="char"),
                             ],
                         ),
                     ),
@@ -1930,9 +1828,7 @@ SeqRule(
                 FieldRule(
                     name="body",
                     type="FIELD",
-                    content=SymbolRule(
-                        type="SYMBOL", name="declaration_list"
-                    ),
+                    content=SymbolRule(type="SYMBOL", name="declaration_list"),
                 ),
                 StringRule(type="STRING", value=";"),
             ],
@@ -1965,9 +1861,7 @@ SeqRule(
         FieldRule(
             name="name",
             type="FIELD",
-            content=SymbolRule(
-                type="SYMBOL", name="_type_identifier"
-            ),
+            content=SymbolRule(type="SYMBOL", name="_type_identifier"),
         ),
         FieldRule(
             name="type_parameters",
@@ -2001,9 +1895,7 @@ SeqRule(
         FieldRule(
             name="body",
             type="FIELD",
-            content=SymbolRule(
-                type="SYMBOL", name="declaration_list"
-            ),
+            content=SymbolRule(type="SYMBOL", name="declaration_list"),
         ),
     ],
 )
@@ -2019,9 +1911,7 @@ SeqRule(
         FieldRule(
             name="name",
             type="FIELD",
-            content=SymbolRule(
-                type="SYMBOL", name="_type_identifier"
-            ),
+            content=SymbolRule(type="SYMBOL", name="_type_identifier"),
         ),
         FieldRule(
             name="type_parameters",
@@ -2087,12 +1977,8 @@ SeqRule(
                             ChoiceRule(
                                 type="CHOICE",
                                 members=[
-                                    SymbolRule(
-                                        type="SYMBOL", name="_type"
-                                    ),
-                                    SymbolRule(
-                                        type="SYMBOL", name="lifetime"
-                                    ),
+                                    SymbolRule(type="SYMBOL", name="_type"),
+                                    SymbolRule(type="SYMBOL", name="lifetime"),
                                     SymbolRule(
                                         type="SYMBOL",
                                         name="higher_ranked_trait_bound",
@@ -2167,9 +2053,7 @@ PrecRule(
                             ChoiceRule(
                                 type="CHOICE",
                                 members=[
-                                    SymbolRule(
-                                        type="SYMBOL", name="lifetime"
-                                    ),
+                                    SymbolRule(type="SYMBOL", name="lifetime"),
                                     SymbolRule(
                                         type="SYMBOL",
                                         name="metavariable",
@@ -2294,9 +2178,7 @@ SeqRule(
                 type="CHOICE",
                 members=[
                     SymbolRule(type="SYMBOL", name="lifetime"),
-                    SymbolRule(
-                        type="SYMBOL", name="_type_identifier"
-                    ),
+                    SymbolRule(type="SYMBOL", name="_type_identifier"),
                 ],
             ),
         ),
@@ -2321,9 +2203,7 @@ SeqRule(
             content=ChoiceRule(
                 type="CHOICE",
                 members=[
-                    SymbolRule(
-                        type="SYMBOL", name="_type_identifier"
-                    ),
+                    SymbolRule(type="SYMBOL", name="_type_identifier"),
                     SymbolRule(
                         type="SYMBOL",
                         name="constrained_type_parameter",
@@ -2370,9 +2250,7 @@ SeqRule(
                         FieldRule(
                             name="type",
                             type="FIELD",
-                            content=SymbolRule(
-                                type="SYMBOL", name="_type"
-                            ),
+                            content=SymbolRule(type="SYMBOL", name="_type"),
                         ),
                     ],
                 ),
@@ -2389,9 +2267,7 @@ SeqRule(
                         FieldRule(
                             name="value",
                             type="FIELD",
-                            content=SymbolRule(
-                                type="SYMBOL", name="_expression"
-                            ),
+                            content=SymbolRule(type="SYMBOL", name="_expression"),
                         ),
                     ],
                 ),
@@ -2408,9 +2284,7 @@ SeqRule(
                         FieldRule(
                             name="alternative",
                             type="FIELD",
-                            content=SymbolRule(
-                                type="SYMBOL", name="block"
-                            ),
+                            content=SymbolRule(type="SYMBOL", name="block"),
                         ),
                     ],
                 ),
@@ -2503,20 +2377,14 @@ SeqRule(
                     members=[
                         ChoiceRule(
                             type="CHOICE",
-                            members=[
-                                SymbolRule(
-                                    type="SYMBOL", name="_use_clause"
-                                )
-                            ],
+                            members=[SymbolRule(type="SYMBOL", name="_use_clause")],
                         ),
                         RepeatRule(
                             type="REPEAT",
                             content=SeqRule(
                                 type="SEQ",
                                 members=[
-                                    StringRule(
-                                        type="STRING", value=","
-                                    ),
+                                    StringRule(type="STRING", value=","),
                                     ChoiceRule(
                                         type="CHOICE",
                                         members=[
@@ -2632,9 +2500,7 @@ SeqRule(
                                             type="SYMBOL",
                                             name="variadic_parameter",
                                         ),
-                                        StringRule(
-                                            type="STRING", value="_"
-                                        ),
+                                        StringRule(type="STRING", value="_"),
                                         SymbolRule(
                                             type="SYMBOL",
                                             name="_type",
@@ -2648,9 +2514,7 @@ SeqRule(
                             content=SeqRule(
                                 type="SEQ",
                                 members=[
-                                    StringRule(
-                                        type="STRING", value=","
-                                    ),
+                                    StringRule(type="STRING", value=","),
                                     SeqRule(
                                         type="SEQ",
                                         members=[
@@ -2661,9 +2525,7 @@ SeqRule(
                                                         type="SYMBOL",
                                                         name="attribute_item",
                                                     ),
-                                                    BlankRule(
-                                                        type="BLANK"
-                                                    ),
+                                                    BlankRule(type="BLANK"),
                                                 ],
                                             ),
                                             ChoiceRule(
@@ -2767,9 +2629,7 @@ SeqRule(
                         FieldRule(
                             name="pattern",
                             type="FIELD",
-                            content=SymbolRule(
-                                type="SYMBOL", name="_pattern"
-                            ),
+                            content=SymbolRule(type="SYMBOL", name="_pattern"),
                         ),
                         StringRule(type="STRING", value=":"),
                     ],
@@ -2855,9 +2715,7 @@ ChoiceRule(
                                 ChoiceRule(
                                     type="CHOICE",
                                     members=[
-                                        SymbolRule(
-                                            type="SYMBOL", name="self"
-                                        ),
+                                        SymbolRule(type="SYMBOL", name="self"),
                                         SymbolRule(
                                             type="SYMBOL",
                                             name="super",
@@ -3024,9 +2882,7 @@ SeqRule(
                         FieldRule(
                             name="length",
                             type="FIELD",
-                            content=SymbolRule(
-                                type="SYMBOL", name="_expression"
-                            ),
+                            content=SymbolRule(type="SYMBOL", name="_expression"),
                         ),
                     ],
                 ),
@@ -3056,9 +2912,7 @@ SeqRule(
                         type="SEQ",
                         members=[
                             StringRule(type="STRING", value=","),
-                            SymbolRule(
-                                type="SYMBOL", name="lifetime"
-                            ),
+                            SymbolRule(type="SYMBOL", name="lifetime"),
                         ],
                     ),
                 ),
@@ -3128,9 +2982,7 @@ SeqRule(
                                             BlankRule(type="BLANK"),
                                         ],
                                     ),
-                                    StringRule(
-                                        type="STRING", value="fn"
-                                    ),
+                                    StringRule(type="STRING", value="fn"),
                                 ],
                             ),
                         ],
@@ -3138,9 +2990,7 @@ SeqRule(
                     FieldRule(
                         name="parameters",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="parameters"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="parameters"),
                     ),
                 ],
             ),
@@ -3155,9 +3005,7 @@ SeqRule(
                         FieldRule(
                             name="return_type",
                             type="FIELD",
-                            content=SymbolRule(
-                                type="SYMBOL", name="_type"
-                            ),
+                            content=SymbolRule(type="SYMBOL", name="_type"),
                         ),
                     ],
                 ),
@@ -3231,12 +3079,8 @@ PrecRule(
                     type="CHOICE",
                     members=[
                         SymbolRule(type="SYMBOL", name="identifier"),
-                        SymbolRule(
-                            type="SYMBOL", name="scoped_identifier"
-                        ),
-                        SymbolRule(
-                            type="SYMBOL", name="field_expression"
-                        ),
+                        SymbolRule(type="SYMBOL", name="scoped_identifier"),
+                        SymbolRule(type="SYMBOL", name="field_expression"),
                     ],
                 ),
             ),
@@ -3244,9 +3088,7 @@ PrecRule(
             FieldRule(
                 name="type_arguments",
                 type="FIELD",
-                content=SymbolRule(
-                    type="SYMBOL", name="type_arguments"
-                ),
+                content=SymbolRule(type="SYMBOL", name="type_arguments"),
             ),
         ],
     ),
@@ -3268,12 +3110,8 @@ PrecRule(
                 content=ChoiceRule(
                     type="CHOICE",
                     members=[
-                        SymbolRule(
-                            type="SYMBOL", name="_type_identifier"
-                        ),
-                        SymbolRule(
-                            type="SYMBOL", name="_reserved_identifier"
-                        ),
+                        SymbolRule(type="SYMBOL", name="_type_identifier"),
+                        SymbolRule(type="SYMBOL", name="_reserved_identifier"),
                         SymbolRule(
                             type="SYMBOL",
                             name="scoped_type_identifier",
@@ -3284,9 +3122,7 @@ PrecRule(
             FieldRule(
                 name="type_arguments",
                 type="FIELD",
-                content=SymbolRule(
-                    type="SYMBOL", name="type_arguments"
-                ),
+                content=SymbolRule(type="SYMBOL", name="type_arguments"),
             ),
         ],
     ),
@@ -3305,12 +3141,8 @@ SeqRule(
             content=ChoiceRule(
                 type="CHOICE",
                 members=[
-                    SymbolRule(
-                        type="SYMBOL", name="_type_identifier"
-                    ),
-                    SymbolRule(
-                        type="SYMBOL", name="scoped_identifier"
-                    ),
+                    SymbolRule(type="SYMBOL", name="_type_identifier"),
+                    SymbolRule(type="SYMBOL", name="scoped_identifier"),
                 ],
             ),
         ),
@@ -3385,29 +3217,17 @@ SeqRule(
                         ChoiceRule(
                             type="CHOICE",
                             members=[
-                                SymbolRule(
-                                    type="SYMBOL", name="_type"
-                                ),
-                                SymbolRule(
-                                    type="SYMBOL", name="type_binding"
-                                ),
-                                SymbolRule(
-                                    type="SYMBOL", name="lifetime"
-                                ),
-                                SymbolRule(
-                                    type="SYMBOL", name="_literal"
-                                ),
-                                SymbolRule(
-                                    type="SYMBOL", name="block"
-                                ),
+                                SymbolRule(type="SYMBOL", name="_type"),
+                                SymbolRule(type="SYMBOL", name="type_binding"),
+                                SymbolRule(type="SYMBOL", name="lifetime"),
+                                SymbolRule(type="SYMBOL", name="_literal"),
+                                SymbolRule(type="SYMBOL", name="block"),
                             ],
                         ),
                         ChoiceRule(
                             type="CHOICE",
                             members=[
-                                SymbolRule(
-                                    type="SYMBOL", name="trait_bounds"
-                                ),
+                                SymbolRule(type="SYMBOL", name="trait_bounds"),
                                 BlankRule(type="BLANK"),
                             ],
                         ),
@@ -3485,9 +3305,7 @@ SeqRule(
         FieldRule(
             name="name",
             type="FIELD",
-            content=SymbolRule(
-                type="SYMBOL", name="_type_identifier"
-            ),
+            content=SymbolRule(type="SYMBOL", name="_type_identifier"),
         ),
         FieldRule(
             name="type_arguments",
@@ -3583,9 +3401,7 @@ SeqRule(
                     type="SEQ",
                     members=[
                         StringRule(type="STRING", value="for"),
-                        SymbolRule(
-                            type="SYMBOL", name="type_parameters"
-                        ),
+                        SymbolRule(type="SYMBOL", name="type_parameters"),
                     ],
                 ),
                 BlankRule(type="BLANK"),
@@ -3597,15 +3413,9 @@ SeqRule(
             content=ChoiceRule(
                 type="CHOICE",
                 members=[
-                    SymbolRule(
-                        type="SYMBOL", name="_type_identifier"
-                    ),
-                    SymbolRule(
-                        type="SYMBOL", name="scoped_type_identifier"
-                    ),
-                    SymbolRule(
-                        type="SYMBOL", name="removed_trait_bound"
-                    ),
+                    SymbolRule(type="SYMBOL", name="_type_identifier"),
+                    SymbolRule(type="SYMBOL", name="scoped_type_identifier"),
+                    SymbolRule(type="SYMBOL", name="removed_trait_bound"),
                     SymbolRule(type="SYMBOL", name="generic_type"),
                     SymbolRule(type="SYMBOL", name="function_type"),
                     SymbolRule(type="SYMBOL", name="tuple_type"),
@@ -3633,12 +3443,8 @@ SeqRule(
                         type="SYMBOL",
                         name="higher_ranked_trait_bound",
                     ),
-                    SymbolRule(
-                        type="SYMBOL", name="_type_identifier"
-                    ),
-                    SymbolRule(
-                        type="SYMBOL", name="scoped_type_identifier"
-                    ),
+                    SymbolRule(type="SYMBOL", name="_type_identifier"),
+                    SymbolRule(type="SYMBOL", name="scoped_type_identifier"),
                     SymbolRule(type="SYMBOL", name="generic_type"),
                     SymbolRule(type="SYMBOL", name="function_type"),
                 ],
@@ -3706,9 +3512,7 @@ ChoiceRule(
         PrecRule(
             type="PREC_LEFT",
             value=0,
-            content=SymbolRule(
-                type="SYMBOL", name="_reserved_identifier"
-            ),
+            content=SymbolRule(type="SYMBOL", name="_reserved_identifier"),
         ),
         SymbolRule(type="SYMBOL", name="self"),
         SymbolRule(type="SYMBOL", name="scoped_identifier"),
@@ -3720,9 +3524,7 @@ ChoiceRule(
         PrecRule(
             type="PREC",
             value=1,
-            content=SymbolRule(
-                type="SYMBOL", name="macro_invocation"
-            ),
+            content=SymbolRule(type="SYMBOL", name="macro_invocation"),
         ),
         SymbolRule(type="SYMBOL", name="unit_expression"),
         SymbolRule(type="SYMBOL", name="break_expression"),
@@ -3732,9 +3534,7 @@ ChoiceRule(
         SymbolRule(type="SYMBOL", name="closure_expression"),
         SymbolRule(type="SYMBOL", name="parenthesized_expression"),
         SymbolRule(type="SYMBOL", name="struct_expression"),
-        SymbolRule(
-            type="SYMBOL", name="_expression_ending_with_block"
-        ),
+        SymbolRule(type="SYMBOL", name="_expression_ending_with_block"),
     ],
 )
 ```
@@ -3783,13 +3583,9 @@ SeqRule(
             content=ChoiceRule(
                 type="CHOICE",
                 members=[
-                    SymbolRule(
-                        type="SYMBOL", name="scoped_identifier"
-                    ),
+                    SymbolRule(type="SYMBOL", name="scoped_identifier"),
                     SymbolRule(type="SYMBOL", name="identifier"),
-                    SymbolRule(
-                        type="SYMBOL", name="_reserved_identifier"
-                    ),
+                    SymbolRule(type="SYMBOL", name="_reserved_identifier"),
                 ],
             ),
         ),
@@ -3798,9 +3594,7 @@ SeqRule(
             type="ALIAS",
             value="token_tree",
             named=True,
-            content=SymbolRule(
-                type="SYMBOL", name="delim_token_tree"
-            ),
+            content=SymbolRule(type="SYMBOL", name="delim_token_tree"),
         ),
     ],
 )
@@ -3818,9 +3612,7 @@ ChoiceRule(
                 StringRule(type="STRING", value="("),
                 RepeatRule(
                     type="REPEAT",
-                    content=SymbolRule(
-                        type="SYMBOL", name="_delim_tokens"
-                    ),
+                    content=SymbolRule(type="SYMBOL", name="_delim_tokens"),
                 ),
                 StringRule(type="STRING", value=")"),
             ],
@@ -3831,9 +3623,7 @@ ChoiceRule(
                 StringRule(type="STRING", value="["),
                 RepeatRule(
                     type="REPEAT",
-                    content=SymbolRule(
-                        type="SYMBOL", name="_delim_tokens"
-                    ),
+                    content=SymbolRule(type="SYMBOL", name="_delim_tokens"),
                 ),
                 StringRule(type="STRING", value="]"),
             ],
@@ -3844,9 +3634,7 @@ ChoiceRule(
                 StringRule(type="STRING", value="{"),
                 RepeatRule(
                     type="REPEAT",
-                    content=SymbolRule(
-                        type="SYMBOL", name="_delim_tokens"
-                    ),
+                    content=SymbolRule(type="SYMBOL", name="_delim_tokens"),
                 ),
                 StringRule(type="STRING", value="}"),
             ],
@@ -3866,9 +3654,7 @@ ChoiceRule(
             type="ALIAS",
             value="token_tree",
             named=True,
-            content=SymbolRule(
-                type="SYMBOL", name="delim_token_tree"
-            ),
+            content=SymbolRule(type="SYMBOL", name="delim_token_tree"),
         ),
     ],
 )
@@ -3902,9 +3688,7 @@ SeqRule(
                         type="CHOICE",
                         members=[
                             SymbolRule(type="SYMBOL", name="_path"),
-                            SymbolRule(
-                                type="SYMBOL", name="bracketed_type"
-                            ),
+                            SymbolRule(type="SYMBOL", name="bracketed_type"),
                             AliasRule(
                                 type="ALIAS",
                                 value="generic_type",
@@ -3954,9 +3738,7 @@ PrecRule(
                         ChoiceRule(
                             type="CHOICE",
                             members=[
-                                SymbolRule(
-                                    type="SYMBOL", name="_path"
-                                ),
+                                SymbolRule(type="SYMBOL", name="_path"),
                                 AliasRule(
                                     type="ALIAS",
                                     value="generic_type",
@@ -3976,9 +3758,7 @@ PrecRule(
             FieldRule(
                 name="name",
                 type="FIELD",
-                content=SymbolRule(
-                    type="SYMBOL", name="_type_identifier"
-                ),
+                content=SymbolRule(type="SYMBOL", name="_type_identifier"),
             ),
         ],
     ),
@@ -4010,12 +3790,8 @@ SeqRule(
                                     name="generic_type_with_turbofish",
                                 ),
                             ),
-                            SymbolRule(
-                                type="SYMBOL", name="bracketed_type"
-                            ),
-                            SymbolRule(
-                                type="SYMBOL", name="generic_type"
-                            ),
+                            SymbolRule(type="SYMBOL", name="bracketed_type"),
+                            SymbolRule(type="SYMBOL", name="generic_type"),
                         ],
                     ),
                     BlankRule(type="BLANK"),
@@ -4026,9 +3802,7 @@ SeqRule(
         FieldRule(
             name="name",
             type="FIELD",
-            content=SymbolRule(
-                type="SYMBOL", name="_type_identifier"
-            ),
+            content=SymbolRule(type="SYMBOL", name="_type_identifier"),
         ),
     ],
 )
@@ -4130,9 +3904,7 @@ PrecRule(
             ChoiceRule(
                 type="CHOICE",
                 members=[
-                    SymbolRule(
-                        type="SYMBOL", name="mutable_specifier"
-                    ),
+                    SymbolRule(type="SYMBOL", name="mutable_specifier"),
                     BlankRule(type="BLANK"),
                 ],
             ),
@@ -4161,9 +3933,7 @@ ChoiceRule(
                     FieldRule(
                         name="left",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                     FieldRule(
                         name="operator",
@@ -4173,9 +3943,7 @@ ChoiceRule(
                     FieldRule(
                         name="right",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                 ],
             ),
@@ -4189,9 +3957,7 @@ ChoiceRule(
                     FieldRule(
                         name="left",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                     FieldRule(
                         name="operator",
@@ -4201,9 +3967,7 @@ ChoiceRule(
                     FieldRule(
                         name="right",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                 ],
             ),
@@ -4217,9 +3981,7 @@ ChoiceRule(
                     FieldRule(
                         name="left",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                     FieldRule(
                         name="operator",
@@ -4229,9 +3991,7 @@ ChoiceRule(
                     FieldRule(
                         name="right",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                 ],
             ),
@@ -4245,9 +4005,7 @@ ChoiceRule(
                     FieldRule(
                         name="left",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                     FieldRule(
                         name="operator",
@@ -4257,9 +4015,7 @@ ChoiceRule(
                     FieldRule(
                         name="right",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                 ],
             ),
@@ -4273,9 +4029,7 @@ ChoiceRule(
                     FieldRule(
                         name="left",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                     FieldRule(
                         name="operator",
@@ -4285,9 +4039,7 @@ ChoiceRule(
                     FieldRule(
                         name="right",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                 ],
             ),
@@ -4301,9 +4053,7 @@ ChoiceRule(
                     FieldRule(
                         name="left",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                     FieldRule(
                         name="operator",
@@ -4323,9 +4073,7 @@ ChoiceRule(
                     FieldRule(
                         name="right",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                 ],
             ),
@@ -4339,9 +4087,7 @@ ChoiceRule(
                     FieldRule(
                         name="left",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                     FieldRule(
                         name="operator",
@@ -4357,9 +4103,7 @@ ChoiceRule(
                     FieldRule(
                         name="right",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                 ],
             ),
@@ -4373,9 +4117,7 @@ ChoiceRule(
                     FieldRule(
                         name="left",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                     FieldRule(
                         name="operator",
@@ -4391,9 +4133,7 @@ ChoiceRule(
                     FieldRule(
                         name="right",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                 ],
             ),
@@ -4407,9 +4147,7 @@ ChoiceRule(
                     FieldRule(
                         name="left",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                     FieldRule(
                         name="operator",
@@ -4426,9 +4164,7 @@ ChoiceRule(
                     FieldRule(
                         name="right",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="_expression"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="_expression"),
                     ),
                 ],
             ),
@@ -4594,9 +4330,7 @@ PrecRule(
             FieldRule(
                 name="function",
                 type="FIELD",
-                content=SymbolRule(
-                    type="SYMBOL", name="_expression_except_range"
-                ),
+                content=SymbolRule(type="SYMBOL", name="_expression_except_range"),
             ),
             FieldRule(
                 name="arguments",
@@ -4631,9 +4365,7 @@ SeqRule(
                                         name="attribute_item",
                                     ),
                                 ),
-                                SymbolRule(
-                                    type="SYMBOL", name="_expression"
-                                ),
+                                SymbolRule(type="SYMBOL", name="_expression"),
                             ],
                         ),
                         RepeatRule(
@@ -4641,9 +4373,7 @@ SeqRule(
                             content=SeqRule(
                                 type="SEQ",
                                 members=[
-                                    StringRule(
-                                        type="STRING", value=","
-                                    ),
+                                    StringRule(type="STRING", value=","),
                                     SeqRule(
                                         type="SEQ",
                                         members=[
@@ -4702,9 +4432,7 @@ SeqRule(
                         FieldRule(
                             name="length",
                             type="FIELD",
-                            content=SymbolRule(
-                                type="SYMBOL", name="_expression"
-                            ),
+                            content=SymbolRule(type="SYMBOL", name="_expression"),
                         ),
                     ],
                 ),
@@ -4859,9 +4587,7 @@ SeqRule(
             content=ChoiceRule(
                 type="CHOICE",
                 members=[
-                    SymbolRule(
-                        type="SYMBOL", name="_type_identifier"
-                    ),
+                    SymbolRule(type="SYMBOL", name="_type_identifier"),
                     AliasRule(
                         type="ALIAS",
                         value="scoped_type_identifier",
@@ -4881,9 +4607,7 @@ SeqRule(
         FieldRule(
             name="body",
             type="FIELD",
-            content=SymbolRule(
-                type="SYMBOL", name="field_initializer_list"
-            ),
+            content=SymbolRule(type="SYMBOL", name="field_initializer_list"),
         ),
     ],
 )
@@ -4924,9 +4648,7 @@ SeqRule(
                             content=SeqRule(
                                 type="SEQ",
                                 members=[
-                                    StringRule(
-                                        type="STRING", value=","
-                                    ),
+                                    StringRule(type="STRING", value=","),
                                     ChoiceRule(
                                         type="CHOICE",
                                         members=[
@@ -4995,9 +4717,7 @@ SeqRule(
             content=ChoiceRule(
                 type="CHOICE",
                 members=[
-                    SymbolRule(
-                        type="SYMBOL", name="_field_identifier"
-                    ),
+                    SymbolRule(type="SYMBOL", name="_field_identifier"),
                     SymbolRule(type="SYMBOL", name="integer_literal"),
                 ],
             ),
@@ -5050,9 +4770,7 @@ PrecRule(
                     FieldRule(
                         name="alternative",
                         type="FIELD",
-                        content=SymbolRule(
-                            type="SYMBOL", name="else_clause"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="else_clause"),
                     ),
                     BlankRule(type="BLANK"),
                 ],
@@ -5214,17 +4932,13 @@ SeqRule(
                     members=[
                         RepeatRule(
                             type="REPEAT",
-                            content=SymbolRule(
-                                type="SYMBOL", name="match_arm"
-                            ),
+                            content=SymbolRule(type="SYMBOL", name="match_arm"),
                         ),
                         AliasRule(
                             type="ALIAS",
                             value="match_arm",
                             named=True,
-                            content=SymbolRule(
-                                type="SYMBOL", name="last_match_arm"
-                            ),
+                            content=SymbolRule(type="SYMBOL", name="last_match_arm"),
                         ),
                     ],
                 ),
@@ -5250,21 +4964,15 @@ PrecRule(
                 content=ChoiceRule(
                     type="CHOICE",
                     members=[
-                        SymbolRule(
-                            type="SYMBOL", name="attribute_item"
-                        ),
-                        SymbolRule(
-                            type="SYMBOL", name="inner_attribute_item"
-                        ),
+                        SymbolRule(type="SYMBOL", name="attribute_item"),
+                        SymbolRule(type="SYMBOL", name="inner_attribute_item"),
                     ],
                 ),
             ),
             FieldRule(
                 name="pattern",
                 type="FIELD",
-                content=SymbolRule(
-                    type="SYMBOL", name="match_pattern"
-                ),
+                content=SymbolRule(type="SYMBOL", name="match_pattern"),
             ),
             StringRule(type="STRING", value="=>"),
             ChoiceRule(
@@ -5276,9 +4984,7 @@ PrecRule(
                             FieldRule(
                                 name="value",
                                 type="FIELD",
-                                content=SymbolRule(
-                                    type="SYMBOL", name="_expression"
-                                ),
+                                content=SymbolRule(type="SYMBOL", name="_expression"),
                             ),
                             StringRule(type="STRING", value=","),
                         ],
@@ -5314,9 +5020,7 @@ SeqRule(
                 type="CHOICE",
                 members=[
                     SymbolRule(type="SYMBOL", name="attribute_item"),
-                    SymbolRule(
-                        type="SYMBOL", name="inner_attribute_item"
-                    ),
+                    SymbolRule(type="SYMBOL", name="inner_attribute_item"),
                 ],
             ),
         ),
@@ -5359,9 +5063,7 @@ SeqRule(
                         FieldRule(
                             name="condition",
                             type="FIELD",
-                            content=SymbolRule(
-                                type="SYMBOL", name="_condition"
-                            ),
+                            content=SymbolRule(type="SYMBOL", name="_condition"),
                         ),
                     ],
                 ),
@@ -5517,9 +5219,7 @@ PrecRule(
             FieldRule(
                 name="parameters",
                 type="FIELD",
-                content=SymbolRule(
-                    type="SYMBOL", name="closure_parameters"
-                ),
+                content=SymbolRule(type="SYMBOL", name="closure_parameters"),
             ),
             ChoiceRule(
                 type="CHOICE",
@@ -5553,9 +5253,7 @@ PrecRule(
                             FieldRule(
                                 name="body",
                                 type="FIELD",
-                                content=SymbolRule(
-                                    type="SYMBOL", name="block"
-                                ),
+                                content=SymbolRule(type="SYMBOL", name="block"),
                             ),
                         ],
                     ),
@@ -5565,9 +5263,7 @@ PrecRule(
                         content=ChoiceRule(
                             type="CHOICE",
                             members=[
-                                SymbolRule(
-                                    type="SYMBOL", name="_expression"
-                                ),
+                                SymbolRule(type="SYMBOL", name="_expression"),
                                 StringRule(type="STRING", value="_"),
                             ],
                         ),
@@ -5595,12 +5291,8 @@ SeqRule(
                         ChoiceRule(
                             type="CHOICE",
                             members=[
-                                SymbolRule(
-                                    type="SYMBOL", name="_pattern"
-                                ),
-                                SymbolRule(
-                                    type="SYMBOL", name="parameter"
-                                ),
+                                SymbolRule(type="SYMBOL", name="_pattern"),
+                                SymbolRule(type="SYMBOL", name="parameter"),
                             ],
                         ),
                         RepeatRule(
@@ -5608,9 +5300,7 @@ SeqRule(
                             content=SeqRule(
                                 type="SEQ",
                                 members=[
-                                    StringRule(
-                                        type="STRING", value=","
-                                    ),
+                                    StringRule(type="STRING", value=","),
                                     ChoiceRule(
                                         type="CHOICE",
                                         members=[
@@ -5756,12 +5446,8 @@ PrecRule(
                 content=ChoiceRule(
                     type="CHOICE",
                     members=[
-                        SymbolRule(
-                            type="SYMBOL", name="_field_identifier"
-                        ),
-                        SymbolRule(
-                            type="SYMBOL", name="integer_literal"
-                        ),
+                        SymbolRule(type="SYMBOL", name="_field_identifier"),
+                        SymbolRule(type="SYMBOL", name="integer_literal"),
                     ],
                 ),
             ),
@@ -5920,9 +5606,7 @@ SeqRule(
                         ChoiceRule(
                             type="CHOICE",
                             members=[
-                                SymbolRule(
-                                    type="SYMBOL", name="_pattern"
-                                ),
+                                SymbolRule(type="SYMBOL", name="_pattern"),
                                 SymbolRule(
                                     type="SYMBOL",
                                     name="closure_expression",
@@ -5934,9 +5618,7 @@ SeqRule(
                             content=SeqRule(
                                 type="SEQ",
                                 members=[
-                                    StringRule(
-                                        type="STRING", value=","
-                                    ),
+                                    StringRule(type="STRING", value=","),
                                     ChoiceRule(
                                         type="CHOICE",
                                         members=[
@@ -5989,12 +5671,8 @@ SeqRule(
                             content=SeqRule(
                                 type="SEQ",
                                 members=[
-                                    StringRule(
-                                        type="STRING", value=","
-                                    ),
-                                    SymbolRule(
-                                        type="SYMBOL", name="_pattern"
-                                    ),
+                                    StringRule(type="STRING", value=","),
+                                    SymbolRule(type="SYMBOL", name="_pattern"),
                                 ],
                             ),
                         ),
@@ -6028,9 +5706,7 @@ SeqRule(
                 type="CHOICE",
                 members=[
                     SymbolRule(type="SYMBOL", name="identifier"),
-                    SymbolRule(
-                        type="SYMBOL", name="scoped_identifier"
-                    ),
+                    SymbolRule(type="SYMBOL", name="scoped_identifier"),
                     AliasRule(
                         type="ALIAS",
                         value="generic_type",
@@ -6056,12 +5732,8 @@ SeqRule(
                             content=SeqRule(
                                 type="SEQ",
                                 members=[
-                                    StringRule(
-                                        type="STRING", value=","
-                                    ),
-                                    SymbolRule(
-                                        type="SYMBOL", name="_pattern"
-                                    ),
+                                    StringRule(type="STRING", value=","),
+                                    SymbolRule(type="SYMBOL", name="_pattern"),
                                 ],
                             ),
                         ),
@@ -6094,12 +5766,8 @@ SeqRule(
             content=ChoiceRule(
                 type="CHOICE",
                 members=[
-                    SymbolRule(
-                        type="SYMBOL", name="_type_identifier"
-                    ),
-                    SymbolRule(
-                        type="SYMBOL", name="scoped_type_identifier"
-                    ),
+                    SymbolRule(type="SYMBOL", name="_type_identifier"),
+                    SymbolRule(type="SYMBOL", name="scoped_type_identifier"),
                 ],
             ),
         ),
@@ -6128,9 +5796,7 @@ SeqRule(
                             content=SeqRule(
                                 type="SEQ",
                                 members=[
-                                    StringRule(
-                                        type="STRING", value=","
-                                    ),
+                                    StringRule(type="STRING", value=","),
                                     ChoiceRule(
                                         type="CHOICE",
                                         members=[
@@ -6194,9 +5860,7 @@ SeqRule(
                         type="ALIAS",
                         value="shorthand_field_identifier",
                         named=True,
-                        content=SymbolRule(
-                            type="SYMBOL", name="identifier"
-                        ),
+                        content=SymbolRule(type="SYMBOL", name="identifier"),
                     ),
                 ),
                 SeqRule(
@@ -6214,9 +5878,7 @@ SeqRule(
                         FieldRule(
                             name="pattern",
                             type="FIELD",
-                            content=SymbolRule(
-                                type="SYMBOL", name="_pattern"
-                            ),
+                            content=SymbolRule(type="SYMBOL", name="_pattern"),
                         ),
                     ],
                 ),
@@ -6270,12 +5932,8 @@ SeqRule(
                         ChoiceRule(
                             type="CHOICE",
                             members=[
-                                StringRule(
-                                    type="STRING", value="..."
-                                ),
-                                StringRule(
-                                    type="STRING", value="..="
-                                ),
+                                StringRule(type="STRING", value="..."),
+                                StringRule(type="STRING", value="..="),
                                 StringRule(type="STRING", value=".."),
                             ],
                         ),
@@ -6286,9 +5944,7 @@ SeqRule(
                                     type="SYMBOL",
                                     name="_literal_pattern",
                                 ),
-                                SymbolRule(
-                                    type="SYMBOL", name="_path"
-                                ),
+                                SymbolRule(type="SYMBOL", name="_path"),
                             ],
                         ),
                     ],
@@ -6445,12 +6101,8 @@ TokenRule(
                         value="0x[0-9a-fA-F_]+",
                         flags=None,
                     ),
-                    PatternRule(
-                        type="PATTERN", value="0b[01_]+", flags=None
-                    ),
-                    PatternRule(
-                        type="PATTERN", value="0o[0-7_]+", flags=None
-                    ),
+                    PatternRule(type="PATTERN", value="0b[01_]+", flags=None),
+                    PatternRule(type="PATTERN", value="0o[0-7_]+", flags=None),
                 ],
             ),
             ChoiceRule(
@@ -6493,9 +6145,7 @@ SeqRule(
             type="ALIAS",
             value='"',
             named=False,
-            content=PatternRule(
-                type="PATTERN", value='[bc]?"', flags=None
-            ),
+            content=PatternRule(type="PATTERN", value='[bc]?"', flags=None),
         ),
         RepeatRule(
             type="REPEAT",
@@ -6526,9 +6176,7 @@ SeqRule(
             type="ALIAS",
             value="string_content",
             named=True,
-            content=SymbolRule(
-                type="SYMBOL", name="raw_string_literal_content"
-            ),
+            content=SymbolRule(type="SYMBOL", name="raw_string_literal_content"),
         ),
         SymbolRule(type="SYMBOL", name="_raw_string_literal_end"),
     ],
@@ -6560,9 +6208,7 @@ TokenRule(
                             SeqRule(
                                 type="SEQ",
                                 members=[
-                                    StringRule(
-                                        type="STRING", value="\\"
-                                    ),
+                                    StringRule(type="STRING", value="\\"),
                                     ChoiceRule(
                                         type="CHOICE",
                                         members=[
@@ -6618,9 +6264,7 @@ TokenRule(
             ChoiceRule(
                 type="CHOICE",
                 members=[
-                    PatternRule(
-                        type="PATTERN", value="[^xu]", flags=None
-                    ),
+                    PatternRule(type="PATTERN", value="[^xu]", flags=None),
                     PatternRule(
                         type="PATTERN",
                         value="u[0-9a-fA-F]{4}",
@@ -6692,9 +6336,7 @@ SeqRule(
                                 ),
                             ),
                         ),
-                        PatternRule(
-                            type="PATTERN", value=".*", flags=None
-                        ),
+                        PatternRule(type="PATTERN", value=".*", flags=None),
                     ],
                 ),
                 SeqRule(
@@ -6724,9 +6366,7 @@ SeqRule(
                     content=PrecRule(
                         type="PREC",
                         value=1,
-                        content=PatternRule(
-                            type="PATTERN", value=".*", flags=None
-                        ),
+                        content=PatternRule(type="PATTERN", value=".*", flags=None),
                     ),
                 ),
             ],

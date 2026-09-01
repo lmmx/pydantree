@@ -488,16 +488,12 @@ NodeTypeWithFields(
         "inner": NodeSchema(
             multiple=False,
             required=False,
-            types=[
-                NodeType(named=True, type="inner_doc_comment_marker")
-            ],
+            types=[NodeType(named=True, type="inner_doc_comment_marker")],
         ),
         "outer": NodeSchema(
             multiple=False,
             required=False,
-            types=[
-                NodeType(named=True, type="outer_doc_comment_marker")
-            ],
+            types=[NodeType(named=True, type="outer_doc_comment_marker")],
         ),
     },
 )
@@ -857,9 +853,7 @@ NodeTypeWithFields(
             types=[
                 NodeType(named=True, type="function_type"),
                 NodeType(named=True, type="generic_type"),
-                NodeType(
-                    named=True, type="higher_ranked_trait_bound"
-                ),
+                NodeType(named=True, type="higher_ranked_trait_bound"),
                 NodeType(named=True, type="scoped_type_identifier"),
                 NodeType(named=True, type="type_identifier"),
             ],
@@ -938,9 +932,7 @@ NodeTypeWithFieldsAndChildren(
             required=False,
             types=[
                 NodeType(named=True, type="field_declaration_list"),
-                NodeType(
-                    named=True, type="ordered_field_declaration_list"
-                ),
+                NodeType(named=True, type="ordered_field_declaration_list"),
             ],
         ),
         "name": NodeSchema(
@@ -1167,9 +1159,7 @@ NodeTypeWithFieldsAndChildren(
             required=True,
             types=[
                 NodeType(named=True, type="field_identifier"),
-                NodeType(
-                    named=True, type="shorthand_field_identifier"
-                ),
+                NodeType(named=True, type="shorthand_field_identifier"),
             ],
         ),
         "pattern": NodeSchema(
@@ -1721,16 +1711,12 @@ NodeTypeWithFields(
         "inner": NodeSchema(
             multiple=False,
             required=False,
-            types=[
-                NodeType(named=True, type="inner_doc_comment_marker")
-            ],
+            types=[NodeType(named=True, type="inner_doc_comment_marker")],
         ),
         "outer": NodeSchema(
             multiple=False,
             required=False,
-            types=[
-                NodeType(named=True, type="outer_doc_comment_marker")
-            ],
+            types=[NodeType(named=True, type="outer_doc_comment_marker")],
         ),
     },
 )
@@ -1997,9 +1983,7 @@ NodeTypeWithFields(
             multiple=False,
             required=True,
             types=[
-                NodeType(
-                    named=True, type="constrained_type_parameter"
-                ),
+                NodeType(named=True, type="constrained_type_parameter"),
                 NodeType(named=True, type="type_identifier"),
             ],
         ),
@@ -2287,9 +2271,7 @@ NodeTypeWithFieldsAndChildren(
 
 
 ```py
-NodeTypeWithFields(
-    type="remaining_field_pattern", named=True, fields={}
-)
+NodeTypeWithFields(type="remaining_field_pattern", named=True, fields={})
 ```
 ## 100) removed_trait_bound
 
@@ -2546,17 +2528,13 @@ NodeTypeWithFields(
         "body": NodeSchema(
             multiple=False,
             required=True,
-            types=[
-                NodeType(named=True, type="field_initializer_list")
-            ],
+            types=[NodeType(named=True, type="field_initializer_list")],
         ),
         "name": NodeSchema(
             multiple=False,
             required=True,
             types=[
-                NodeType(
-                    named=True, type="generic_type_with_turbofish"
-                ),
+                NodeType(named=True, type="generic_type_with_turbofish"),
                 NodeType(named=True, type="scoped_type_identifier"),
                 NodeType(named=True, type="type_identifier"),
             ],
@@ -2577,9 +2555,7 @@ NodeTypeWithFieldsAndChildren(
             required=False,
             types=[
                 NodeType(named=True, type="field_declaration_list"),
-                NodeType(
-                    named=True, type="ordered_field_declaration_list"
-                ),
+                NodeType(named=True, type="ordered_field_declaration_list"),
             ],
         ),
         "name": NodeSchema(
@@ -3073,9 +3049,7 @@ NodeTypeWithFieldsAndChildren(
         "body": NodeSchema(
             multiple=False,
             required=True,
-            types=[
-                NodeType(named=True, type="field_declaration_list")
-            ],
+            types=[NodeType(named=True, type="field_declaration_list")],
         ),
         "name": NodeSchema(
             multiple=False,
@@ -3310,9 +3284,7 @@ NodeTypeWithFields(
             types=[
                 NodeType(named=True, type="array_type"),
                 NodeType(named=True, type="generic_type"),
-                NodeType(
-                    named=True, type="higher_ranked_trait_bound"
-                ),
+                NodeType(named=True, type="higher_ranked_trait_bound"),
                 NodeType(named=True, type="lifetime"),
                 NodeType(named=True, type="pointer_type"),
                 NodeType(named=True, type="primitive_type"),
