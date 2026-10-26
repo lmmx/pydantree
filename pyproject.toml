@@ -27,7 +27,7 @@ name = "pydantree"
 version = "0.1.2"
 description = "Pydantic parser for tree-sitter"
 authors = [
-  {name = "Louis Maddox", email = "louismmx@gmail.com"}
+  { name = "Louis Maddox", email = "louismmx@gmail.com" }
 ]
 dependencies = [
   "defopt>=6.4.0",
